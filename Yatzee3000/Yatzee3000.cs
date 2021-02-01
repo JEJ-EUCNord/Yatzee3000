@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Yatzee3000
 {
-    static class Program
+    static class Yatzee3000
     {
         /// <summary>
         ///  The main entry point for the application.

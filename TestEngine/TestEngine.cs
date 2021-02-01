@@ -3,7 +3,7 @@ using Yatzee3000;
 
 namespace TestEngine
 {
-    class Program
+    class TestEngine
     {        
         static void Main(string[] args)
         {
