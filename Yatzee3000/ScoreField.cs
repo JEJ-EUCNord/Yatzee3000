@@ -6,14 +6,14 @@ namespace Yatzee3000
 {
     class ScoreField
     {
-        public string  label{ get; set; }
-        public int p1 { get; set; }
-        public int p2 { get; set; }
+        public string Label{ get; set; }
+        public int P1 { get; set; }
+        public int P2 { get; set; }
 
         public ScoreField(string label, int p1, int p2) {
-            this.label = label;
-            this.p1 = p1;
-            this.p2 = p2;
+            this.Label = label;
+            this.P1 = p1;
+            this.P2 = p2;
         }
     }
 }

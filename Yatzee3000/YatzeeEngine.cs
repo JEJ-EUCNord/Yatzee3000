@@ -12,7 +12,7 @@ namespace Yatzee3000
     };
     class YatzeeEngine
     {
-        private YatzeeClient client = null;
+        private IYatzeeClient client = null;
 
         private int numberOfPlayers = 2; // antal spillere 
         private int gameFields = 18;
@@ -35,19 +35,19 @@ namespace Yatzee3000
             scoreBoardValidFields = new Boolean[gameFields, numberOfPlayers]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
             randomizer = new Random();
             
-            initializeGame();
+            InitializeGame();
         }
 
-        public int getThrowCount() { return throwCount; }
+        public int GetThrowCount() { return throwCount; }
 
-        public int getCurrentPlayer() { return currentPlayer; }
+        public int GetCurrentPlayer() { return currentPlayer; }
 
-        public int[,] getScoreBoard() { return scoreBoard; }
-        public Boolean[,] getScoreBoardValidFields() { return scoreBoardValidFields; }
+        public int[,] GetScoreBoard() { return scoreBoard; }
+        public Boolean[,] GetScoreBoardValidFields() { return scoreBoardValidFields; }
 
         public int[] GetThrow() { return roll; }
 
-        public void initializeGame()
+        public void InitializeGame()
         {
             Array.Fill(roll, 0);
             Array.Fill(holdDice, false);
@@ -72,7 +72,7 @@ namespace Yatzee3000
         /*******************************************************************************************
          * Kaster terninger ( dvs. på dem som er lagt fra ) i holdDice
          ******************************************************************************************/
-        public void throwDice()
+        public void ThrowDice()
         { 
             if (throwCount >= 3)    // Do nothing if max amount of throws for this player has been reached
                 return;
@@ -83,7 +83,7 @@ namespace Yatzee3000
                 }
             }
             throwCount++;
-            client.update();
+            client.Update();
         }
 
         public void SetTurn(int n)
@@ -92,7 +92,7 @@ namespace Yatzee3000
             Array.Fill(roll, 0);
             Array.Fill(holdDice, false);
             currentPlayer = n;
-            client.update();
+            client.Update();
         }
 
         public void HoldDice(int x)
@@ -102,7 +102,7 @@ namespace Yatzee3000
             //client.update(); // FIX UPDATE: to reflect DICE state (hold og not-hold)
         }
 
-        public void RegisterClient(YatzeeClient yc) {
+        public void RegisterClient(IYatzeeClient yc) {
             this.client = yc;
         }
 
@@ -165,43 +165,43 @@ namespace Yatzee3000
             switch (field)
             {
                 case YField.ONES:
-                    scoreBoard[(int)YField.ONES, currentPlayer] = ScoreCounter.scoreSingleSum(1, roll);
+                    scoreBoard[(int)YField.ONES, currentPlayer] = ScoreCounter.ScoreSingleSum(1, roll);
                     break;
                 case YField.TWOS:
-                    scoreBoard[(int)YField.TWOS, currentPlayer] = ScoreCounter.scoreSingleSum(2, roll);
+                    scoreBoard[(int)YField.TWOS, currentPlayer] = ScoreCounter.ScoreSingleSum(2, roll);
                     break;
                 case YField.THREES:
-                    scoreBoard[(int)YField.THREES, currentPlayer] = ScoreCounter.scoreSingleSum(3, roll);
+                    scoreBoard[(int)YField.THREES, currentPlayer] = ScoreCounter.ScoreSingleSum(3, roll);
                     break;
                 case YField.FOURS:
-                    scoreBoard[(int)YField.FOURS, currentPlayer] = ScoreCounter.scoreSingleSum(4, roll);
+                    scoreBoard[(int)YField.FOURS, currentPlayer] = ScoreCounter.ScoreSingleSum(4, roll);
                     break;
                 case YField.FIVES:
-                    scoreBoard[(int)YField.FIVES, currentPlayer] = ScoreCounter.scoreSingleSum(5, roll);
+                    scoreBoard[(int)YField.FIVES, currentPlayer] = ScoreCounter.ScoreSingleSum(5, roll);
                     break;
                 case YField.SIXES:
-                    scoreBoard[(int)YField.SIXES, currentPlayer] = ScoreCounter.scoreSingleSum(6, roll);
+                    scoreBoard[(int)YField.SIXES, currentPlayer] = ScoreCounter.ScoreSingleSum(6, roll);
                     break;
                 case YField.KIND3:
-                    scoreBoard[(int)YField.KIND3, currentPlayer] = ScoreCounter.scoreKind(3, roll);
+                    scoreBoard[(int)YField.KIND3, currentPlayer] = ScoreCounter.ScoreKind(3, roll);
                     break;
                 case YField.KIND4:
-                    scoreBoard[(int)YField.KIND4, currentPlayer] = ScoreCounter.scoreKind(4, roll);
+                    scoreBoard[(int)YField.KIND4, currentPlayer] = ScoreCounter.ScoreKind(4, roll);
                     break;
                 case YField.FHOUSE:
-                    scoreBoard[(int)YField.FHOUSE, currentPlayer] = ScoreCounter.scoreFullHouse(roll);
+                    scoreBoard[(int)YField.FHOUSE, currentPlayer] = ScoreCounter.ScoreFullHouse(roll);
                     break;
                 case YField.S_STRAIGHT:
-                    scoreBoard[(int)YField.S_STRAIGHT, currentPlayer] = ScoreCounter.scoreSmallStraight(roll);
+                    scoreBoard[(int)YField.S_STRAIGHT, currentPlayer] = ScoreCounter.ScoreSmallStraight(roll);
                     break;
                 case YField.L_STRAIGHT:
-                    scoreBoard[(int)YField.L_STRAIGHT, currentPlayer] = ScoreCounter.scoreLargeStraight(roll);
+                    scoreBoard[(int)YField.L_STRAIGHT, currentPlayer] = ScoreCounter.ScoreLargeStraight(roll);
                     break;
                 case YField.CHANCE:
-                    scoreBoard[(int)YField.CHANCE, currentPlayer] = ScoreCounter.scoreChance(roll);
+                    scoreBoard[(int)YField.CHANCE, currentPlayer] = ScoreCounter.ScoreChance(roll);
                     break;
                 case YField.YATZEE:
-                    scoreBoard[(int)YField.YATZEE, currentPlayer] = ScoreCounter.scoreYatzee(roll);
+                    scoreBoard[(int)YField.YATZEE, currentPlayer] = ScoreCounter.ScoreYatzee(roll);
                     break;
             }
 
@@ -218,17 +218,14 @@ namespace Yatzee3000
         }
     }
 
-    
 
+    interface IYatzeeClient {
 
-    interface YatzeeClient {
-
-        public void update() {
+        public void Update()
+        {
         
         }
- 
     }
-
 }
 
 

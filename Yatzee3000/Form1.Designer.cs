@@ -72,7 +72,7 @@
             this.rollDice.TabIndex = 0;
             this.rollDice.Text = "Kast !";
             this.rollDice.UseVisualStyleBackColor = true;
-            this.rollDice.Click += new System.EventHandler(this.button1_Click);
+            this.rollDice.Click += new System.EventHandler(this.Button1_Click);
             // 
             // pictureBox1
             // 
@@ -93,7 +93,7 @@
             this.btOnes.TabIndex = 4;
             this.btOnes.Text = "<- 1\'ERE";
             this.btOnes.UseVisualStyleBackColor = true;
-            this.btOnes.Click += new System.EventHandler(this.button3_Click);
+            this.btOnes.Click += new System.EventHandler(this.Button3_Click);
             // 
             // btTwos
             // 
@@ -103,7 +103,7 @@
             this.btTwos.TabIndex = 4;
             this.btTwos.Text = "<- 2\'ERE";
             this.btTwos.UseVisualStyleBackColor = true;
-            this.btTwos.Click += new System.EventHandler(this.btTwos_Click);
+            this.btTwos.Click += new System.EventHandler(this.BtTwos_Click);
             // 
             // button5
             // 
@@ -113,7 +113,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "<- 3\'ERE";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button6
             // 
@@ -123,7 +123,7 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "<- 4\'ERE";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button7
             // 
@@ -133,7 +133,7 @@
             this.button7.TabIndex = 4;
             this.button7.Text = "<- 5\'ERE";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button8
             // 
@@ -143,7 +143,7 @@
             this.button8.TabIndex = 4;
             this.button8.Text = "<- 6\'ERE";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // button9
             // 
@@ -153,7 +153,7 @@
             this.button9.TabIndex = 4;
             this.button9.Text = "<- 3 ENS ";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // button10
             // 
@@ -163,7 +163,7 @@
             this.button10.TabIndex = 4;
             this.button10.Text = "<- 4 ENS";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // dice5
             // 
@@ -204,7 +204,7 @@
             this.dice2.TabIndex = 4;
             this.dice2.Text = "X";
             this.dice2.UseVisualStyleBackColor = true;
-            this.dice2.Click += new System.EventHandler(this.dice2_Click);
+            this.dice2.Click += new System.EventHandler(this.Dice2_Click);
             // 
             // dice1
             // 
@@ -215,7 +215,7 @@
             this.dice1.TabIndex = 4;
             this.dice1.Text = "X";
             this.dice1.UseVisualStyleBackColor = true;
-            this.dice1.Click += new System.EventHandler(this.dice1_Click);
+            this.dice1.Click += new System.EventHandler(this.Dice1_Click);
             // 
             // diceBox
             // 
@@ -239,7 +239,7 @@
             this.button16.TabIndex = 4;
             this.button16.Text = "L.Straigth";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.Click += new System.EventHandler(this.Button16_Click);
             // 
             // button17
             // 
@@ -249,7 +249,7 @@
             this.button17.TabIndex = 4;
             this.button17.Text = "S.Straight";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.Button17_Click);
             // 
             // button18
             // 
@@ -259,7 +259,7 @@
             this.button18.TabIndex = 4;
             this.button18.Text = "<- Yatzee";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.Click += new System.EventHandler(this.Button18_Click);
             // 
             // button19
             // 
@@ -269,7 +269,7 @@
             this.button19.TabIndex = 4;
             this.button19.Text = "<- Chance";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.Click += new System.EventHandler(this.Button19_Click);
             // 
             // labelKast
             // 
@@ -290,7 +290,7 @@
             this.dataGrid.Size = new System.Drawing.Size(288, 468);
             this.dataGrid.TabIndex = 2;
             this.dataGrid.Text = "dataGridView1";
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
+            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
             // 
             // holdDice1
             // 
@@ -302,7 +302,7 @@
             this.holdDice1.TabIndex = 7;
             this.holdDice1.Text = "-- Hold --";
             this.holdDice1.UseVisualStyleBackColor = true;
-            this.holdDice1.CheckedChanged += new System.EventHandler(this.holdDice1_CheckedChanged);
+            this.holdDice1.CheckedChanged += new System.EventHandler(this.HoldDice1_CheckedChanged);
             // 
             // holdDice2
             // 
@@ -356,7 +356,7 @@
             this.messageField.Name = "messageField";
             this.messageField.Size = new System.Drawing.Size(0, 15);
             this.messageField.TabIndex = 8;
-            this.messageField.Click += new System.EventHandler(this.label1_Click);
+            this.messageField.Click += new System.EventHandler(this.Label1_Click);
             // 
             // labelTur
             // 
@@ -376,7 +376,7 @@
             this.btFullHouse.TabIndex = 10;
             this.btFullHouse.Text = "<- FullHouse";
             this.btFullHouse.UseVisualStyleBackColor = true;
-            this.btFullHouse.Click += new System.EventHandler(this.btFullHouse_Click);
+            this.btFullHouse.Click += new System.EventHandler(this.BtFullHouse_Click);
             // 
             // Form1
             // 

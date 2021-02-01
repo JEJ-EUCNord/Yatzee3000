@@ -6,7 +6,7 @@ namespace Yatzee3000
 {
     public class ScoreCounter
     {
-        static public int scoreSingleSum(int n, int[] r)
+        static public int ScoreSingleSum(int n, int[] r)
         {
             int sum = 0;
 
@@ -18,7 +18,7 @@ namespace Yatzee3000
             return sum;
         }
 
-        static public int scoreKind(int antal, int[] r)
+        static public int ScoreKind(int antal, int[] r)
         {
             int sum = 0;
             int count = 0;
@@ -49,7 +49,7 @@ namespace Yatzee3000
             return 0;
         }
 
-        static public int scoreFullHouse(int[] r)
+        static public int ScoreFullHouse(int[] r)
         {
             Boolean check2 = false; // sandt hvis vi har 3 ens
             Boolean check3 = false; // sandt hvis vi har 2 ens
@@ -69,7 +69,7 @@ namespace Yatzee3000
             return 0;
         }
 
-        static public int scoreSmallStraight(int[] r)
+        static public int ScoreSmallStraight(int[] r)
         {
             int[] counts = new int[6]; // bruger denne til at holde styr på antallet af forekomster
             int forekomster = 0;
@@ -89,7 +89,7 @@ namespace Yatzee3000
             return 0;
         }
 
-        static public int scoreLargeStraight(int[] r)
+        static public int ScoreLargeStraight(int[] r)
         {
             int[] counts = new int[6]; // bruger denne til at holde styr på antallet af forekomster
 
@@ -105,7 +105,7 @@ namespace Yatzee3000
             return 40;
         }
 
-        static public int scoreChance(int[] r)
+        static public int ScoreChance(int[] r)
         {
             int sum = 0;
 
@@ -116,7 +116,7 @@ namespace Yatzee3000
             return sum;
         }
 
-        static public int scoreYatzee(int[] r)
+        static public int ScoreYatzee(int[] r)
         {
             for (int x = 0; x < r.Length - 1; x++)
                 if (r[x] != r[x + 1])
