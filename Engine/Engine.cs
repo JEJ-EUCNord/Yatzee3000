@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 
-namespace Yatzee3000
+namespace Engine
 {
     public enum YField
     {
         ONES, TWOS, THREES, FOURS, FIVES, SIXES, UPPER_SUB_TOTAL, BONUS, UPPER_TOTAL,
         KIND3, KIND4, FHOUSE, S_STRAIGHT, L_STRAIGHT, YATZEE, CHANCE, LOWER_TOTAL, TOTAL
     };
-    class YatzeeEngine
+    public class YatzeeEngine
     {
         private IYatzeeClient client = null;
 
@@ -18,7 +16,7 @@ namespace Yatzee3000
         private int gameFields = 18;
         private int throwCount;
         private int numberOfDice = 5;   // Lets just leave at 5 ..for now
-       
+
         private int[] roll;// Det akuelle terningekaste
         private Boolean[] holdDice; // Det akuelle terningekaste
         private int[,] scoreBoard;
@@ -31,10 +29,10 @@ namespace Yatzee3000
         {
             roll = new int[numberOfDice];  // vi spiller med 5 terninger
             holdDice = new bool[numberOfDice];
-            scoreBoard = new int[gameFields, numberOfPlayers+1]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
+            scoreBoard = new int[gameFields, numberOfPlayers + 1]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
             scoreBoardValidFields = new Boolean[gameFields, numberOfPlayers]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
             randomizer = new Random();
-            
+
             InitializeGame();
         }
 
@@ -54,7 +52,7 @@ namespace Yatzee3000
 
             for (int i = 0; i < gameFields; ++i)
             {
-                for (int j = 0; j < numberOfPlayers+1; ++j)
+                for (int j = 0; j < numberOfPlayers + 1; ++j)
                 {
                     scoreBoard[i, j] = 0;
                 }
@@ -73,12 +71,14 @@ namespace Yatzee3000
          * Kaster terninger ( dvs. på dem som er lagt fra ) i holdDice
          ******************************************************************************************/
         public void ThrowDice()
-        { 
+        {
             if (throwCount >= 3)    // Do nothing if max amount of throws for this player has been reached
                 return;
 
-            for (int x = 0; x < numberOfDice; x++) {
-                if (holdDice[x] == false) {
+            for (int x = 0; x < numberOfDice; x++)
+            {
+                if (holdDice[x] == false)
+                {
                     roll[x] = randomizer.Next(1, 6);    // MAGIC NUMBER !!!.. this needs to be changed
                 }
             }
@@ -102,21 +102,24 @@ namespace Yatzee3000
             //client.update(); // FIX UPDATE: to reflect DICE state (hold og not-hold)
         }
 
-        public void RegisterClient(IYatzeeClient yc) {
+        public void RegisterClient(IYatzeeClient yc)
+        {
             this.client = yc;
         }
 
-        public void SumScores() {
+        public void SumScores()
+        {
 
             int upper_sub_total;
             int upper_total;
             int lower_total;
             int total;
 
-            for(int x=1; x <= numberOfPlayers; x++) {
+            for (int x = 1; x <= numberOfPlayers; x++)
+            {
                 upper_sub_total = 0;
                 upper_total = 0;
-                
+
                 lower_total = 0;
                 total = 0;
 
@@ -130,7 +133,8 @@ namespace Yatzee3000
                 Debug.WriteLine("UpperTotal: {0}", upper_total);
 
                 upper_total = upper_sub_total;
-                if (upper_sub_total > 63) {
+                if (upper_sub_total > 63)
+                {
                     scoreBoard[(int)YField.BONUS, x] = 35;
                     upper_total = upper_sub_total + 35;
                 }
@@ -146,7 +150,6 @@ namespace Yatzee3000
 
                 total = upper_total + lower_total;
 
-                
                 scoreBoard[(int)YField.UPPER_SUB_TOTAL, x] = upper_total;
                 scoreBoard[(int)YField.UPPER_TOTAL, x] = upper_total;
 
@@ -157,10 +160,11 @@ namespace Yatzee3000
 
         public void SelectField(YField field)
         {
-            if (scoreBoardValidFields[(int)field, currentPlayer-1] != true) {
+            if (scoreBoardValidFields[(int)field, currentPlayer - 1] != true)
+            {
                 return; // currentPlayer forsøgte at sætte en værdi ind hvor der allerede eksisterende en værdi.
             }
-            scoreBoardValidFields[(int)field, currentPlayer-1] = false;
+            scoreBoardValidFields[(int)field, currentPlayer - 1] = false;
 
             switch (field)
             {
@@ -219,15 +223,12 @@ namespace Yatzee3000
     }
 
 
-    interface IYatzeeClient {
+    public interface IYatzeeClient
+    {
 
         public void Update()
         {
-        
+
         }
     }
 }
-
-
-
-

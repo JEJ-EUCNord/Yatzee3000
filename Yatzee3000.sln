@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yatzee3000", "Yatzee3000\Yatzee3000.csproj", "{1386A9F2-DB2D-4CEE-A8BE-95D2DAE54952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEngine", "TestEngine\TestEngine.csproj", "{42DB7F77-1851-446E-AB75-9D95B3EAB4B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestEngine", "TestEngine\TestEngine.csproj", "{42DB7F77-1851-446E-AB75-9D95B3EAB4B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{AF82506E-8422-41B5-9BD0-8C2BF25E6DE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{42DB7F77-1851-446E-AB75-9D95B3EAB4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42DB7F77-1851-446E-AB75-9D95B3EAB4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42DB7F77-1851-446E-AB75-9D95B3EAB4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF82506E-8422-41B5-9BD0-8C2BF25E6DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF82506E-8422-41B5-9BD0-8C2BF25E6DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF82506E-8422-41B5-9BD0-8C2BF25E6DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF82506E-8422-41B5-9BD0-8C2BF25E6DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

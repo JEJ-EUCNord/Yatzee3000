@@ -1,4 +1,4 @@
-﻿namespace Yatzee3000
+﻿namespace Engine
 {
     partial class Form1
     {

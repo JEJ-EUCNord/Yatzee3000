@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine;
 
-namespace Yatzee3000
+
+namespace Engine
 {
     public partial class Form1 : Form, IYatzeeClient
     {

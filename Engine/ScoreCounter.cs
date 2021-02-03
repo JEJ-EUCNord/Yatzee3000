@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Yatzee3000
+namespace Engine
 {
     public class ScoreCounter
     {

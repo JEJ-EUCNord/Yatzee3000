@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Yatzee3000.Properties {
+namespace Engine.Properties {
     using System;
     
     
