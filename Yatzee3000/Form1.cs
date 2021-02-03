@@ -17,6 +17,7 @@ namespace Engine
     {
         readonly YatzeeEngine ye;
         readonly ScoreField[] theScore;
+
         public Form1()
         {
             InitializeComponent();
@@ -79,39 +80,9 @@ namespace Engine
             ye.SelectField(YField.ONES);
         }
 
-        // Implementing the YatzeeClient interface
-        public void Update()
-        {
-            int[] th = ye.GetThrow();
-            dice1.Text = "" + th[0];
-            dice2.Text = "" + th[1];
-            dice3.Text = "" + th[2];
-            dice4.Text = "" + th[3];
-            dice5.Text = "" + th[4];
-            labelKast.Text = "Kast Nr.: " + ye.GetThrowCount();
-            labelTur.Text = "Spiller Nr.: " + ye.GetCurrentPlayer();
-            holdDice1.Checked = false;
-            holdDice2.Checked = false;
-            holdDice3.Checked = false;
-            holdDice4.Checked = false;
-            holdDice5.Checked = false;
-            //==============================================================================================================
-            UpdateScoreBoard();
-        }
-
         private void Twos_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.TWOS);
-        }
-
-        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Threes_Click(object sender, EventArgs e)
@@ -144,6 +115,11 @@ namespace Engine
             ye.SelectField(YField.KIND_4);
         }
 
+        private void FullHouse_Click(object sender, EventArgs e)
+        {
+            ye.SelectField(YField.FULL_HOUSE);
+        }
+
         private void LStraight_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.S_STRAIGHT);
@@ -159,9 +135,45 @@ namespace Engine
             ye.SelectField(YField.YATZEE);
         }
 
+        // Implementing the YatzeeClient interface
+        public void Update()
+        {
+            int[] th = ye.GetThrow();
+            dice1.Text = "" + th[0];
+            dice2.Text = "" + th[1];
+            dice3.Text = "" + th[2];
+            dice4.Text = "" + th[3];
+            dice5.Text = "" + th[4];
+            labelKast.Text = "Kast Nr.: " + ye.GetThrowCount();
+            labelTur.Text = "Spiller Nr.: " + ye.GetCurrentPlayer();
+            holdDice1.Checked = false;
+            holdDice2.Checked = false;
+            holdDice3.Checked = false;
+            holdDice4.Checked = false;
+            holdDice5.Checked = false;
+            //==============================================================================================================
+            UpdateScoreBoard();
+        }
+
+        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void Button19_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.CHANCE);
+        }
+
+        private void HoldDice1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void HoldDice2_CheckedChanged(object sender, EventArgs e)
@@ -174,11 +186,6 @@ namespace Engine
 
         }
 
-        private void HoldDice1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Dice2_Click(object sender, EventArgs e)
         {
 
@@ -187,11 +194,6 @@ namespace Engine
         private void Label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FullHouse_Click(object sender, EventArgs e)
-        {
-            ye.SelectField(YField.FULL_HOUSE);
         }
     }
 }
