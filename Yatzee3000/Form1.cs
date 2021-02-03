@@ -15,8 +15,8 @@ namespace Engine
 {
     public partial class Form1 : Form, IYatzeeClient
     {
-        YatzeeEngine ye;
-        ScoreField[] theScore;
+        readonly YatzeeEngine ye;
+        readonly ScoreField[] theScore;
         public Form1()
         {
             InitializeComponent();

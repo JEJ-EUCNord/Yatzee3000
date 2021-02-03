@@ -12,18 +12,18 @@ namespace Engine
     {
         private IYatzeeClient client = null;
 
-        private int numberOfPlayers = 2; // antal spillere 
-        private int gameFields = 18;
+        private const int numberOfPlayers = 2; // antal spillere 
+        private const int gameFields = 18;
+        private const int numberOfDice = 5;    // Lets just leave at 5 ..for now
         private int throwCount;
-        private int numberOfDice = 5;   // Lets just leave at 5 ..for now
-
-        private int[] roll;// Det akuelle terningekaste
-        private Boolean[] holdDice; // Det akuelle terningekaste
-        private int[,] scoreBoard;
-        private Boolean[,] scoreBoardValidFields;
+ 
+        private readonly int[] roll;// Det akuelle terningekaste
+        private readonly bool[] holdDice; // Det akuelle terningekaste
+        private readonly int[,] scoreBoard;
+        private readonly bool[,] scoreBoardValidFields;
         private int currentPlayer;
-        private Random randomizer;
-        private string gameMessage = "";
+        private readonly Random randomizer;
+        // private string gameMessage = "";   // for future use
 
         public YatzeeEngine()
         {
