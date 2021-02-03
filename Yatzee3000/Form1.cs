@@ -13,7 +13,7 @@ using Engine;
 
 namespace Engine
 {
-    public partial class Form1 : Form, IYatzeeClient
+    public partial class Form1 : Form
     {
         readonly YatzeeEngine ye;
         readonly ScoreField[] theScore;
@@ -22,7 +22,6 @@ namespace Engine
         {
             InitializeComponent();
             ye = new YatzeeEngine();
-            ye.RegisterClient(this);
 
             theScore = new ScoreField[18];
 
@@ -48,6 +47,8 @@ namespace Engine
                 ye.HoldDice(5);
 
             ye.ThrowDice();
+
+            UpdateGUI();
         }
 
         public void UpdateScoreBoard()
@@ -78,65 +79,76 @@ namespace Engine
         private void Ones_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.ONES);
-        }
+            UpdateGUI();        }
 
         private void Twos_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.TWOS);
+            UpdateGUI();
         }
 
         private void Threes_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.THREES);
+            UpdateGUI();
         }
 
         private void Fours_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.FOURS);
+            UpdateGUI();
         }
 
         private void Fives_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.FIVES);
+            UpdateGUI();
         }
 
         private void Sixes_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.SIXES);
+            UpdateGUI();
         }
 
         private void Kind3_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.KIND_3);
+            UpdateGUI();
         }
 
         private void Kind4_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.KIND_4);
+            UpdateGUI();
         }
 
         private void FullHouse_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.FULL_HOUSE);
+            UpdateGUI();
         }
 
         private void LStraight_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.S_STRAIGHT);
+            UpdateGUI();
         }
 
         private void SStraight_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.L_STRAIGHT);
+            UpdateGUI();
         }
 
         private void Yatzee_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.YATZEE);
+            UpdateGUI();
         }
 
         // Implementing the YatzeeClient interface
-        public void Update()
+        public void UpdateGUI()
         {
             int[] th = ye.GetThrow();
             dice1.Text = "" + th[0];

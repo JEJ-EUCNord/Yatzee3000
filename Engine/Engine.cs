@@ -8,10 +8,9 @@ namespace Engine
         ONES, TWOS, THREES, FOURS, FIVES, SIXES, UPPER_SUB_TOTAL, BONUS, UPPER_TOTAL,
         KIND_3, KIND_4, FULL_HOUSE, S_STRAIGHT, L_STRAIGHT, YATZEE, CHANCE, LOWER_TOTAL, TOTAL
     };
+
     public class YatzeeEngine
     {
-        private IYatzeeClient client = null;
-
         private const int numberOfPlayers = 2; // antal spillere 
         private const int gameFields = 18;
         private const int numberOfDice = 5;    // Lets just leave at 5 ..for now
@@ -83,7 +82,6 @@ namespace Engine
                 }
             }
             throwCount++;
-            client.Update();
         }
 
         public void SetTurn(int n)
@@ -92,7 +90,6 @@ namespace Engine
             Array.Fill(roll, 0);
             Array.Fill(holdDice, false);
             currentPlayer = n;
-            client.Update();
         }
 
         public void HoldDice(int x)
@@ -100,11 +97,6 @@ namespace Engine
             holdDice[x - 1] = true;
             Debug.WriteLine("Hold dice nr : {0}", x);
             //client.update(); // FIX UPDATE: to reflect DICE state (hold og not-hold)
-        }
-
-        public void RegisterClient(IYatzeeClient yc)
-        {
-            this.client = yc;
         }
 
         public void SumScores()
@@ -209,9 +201,6 @@ namespace Engine
                     break;
             }
 
-
-
-
             SumScores();
 
 
@@ -219,15 +208,6 @@ namespace Engine
                 SetTurn(2);
             else
                 SetTurn(1);
-        }
-    }
-
-
-    public interface IYatzeeClient
-    {
-        public void Update()
-        {
-
         }
     }
 }
