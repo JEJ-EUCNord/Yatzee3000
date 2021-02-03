@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Engine;
 
 
-namespace Engine
+namespace Yatzee3000
 {
     public partial class Form1 : Form
     {
@@ -145,6 +145,12 @@ namespace Engine
         private void Yatzee_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.YATZEE);
+            UpdateGUI();
+        }
+
+        private void Chance_Click(object sender, EventArgs e)
+        {
+            ye.SelectField(YField.CHANCE);
             UpdateGUI();
         }
 

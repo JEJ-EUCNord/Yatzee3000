@@ -1,4 +1,4 @@
-﻿namespace Engine
+﻿namespace Yatzee3000
 {
     partial class Form1
     {
@@ -48,7 +48,7 @@
             this.LStraight = new System.Windows.Forms.Button();
             this.SStraight = new System.Windows.Forms.Button();
             this.Yatzee = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.Chance = new System.Windows.Forms.Button();
             this.labelKast = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.holdDice1 = new System.Windows.Forms.CheckBox();
@@ -259,14 +259,15 @@
             this.Yatzee.UseVisualStyleBackColor = true;
             this.Yatzee.Click += new System.EventHandler(this.Yatzee_Click);
             // 
-            // button19
+            // Chance
             // 
-            this.button19.Location = new System.Drawing.Point(307, 360);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(86, 23);
-            this.button19.TabIndex = 4;
-            this.button19.Text = "<- Chance";
-            this.button19.UseVisualStyleBackColor = true;
+            this.Chance.Location = new System.Drawing.Point(307, 360);
+            this.Chance.Name = "Chance";
+            this.Chance.Size = new System.Drawing.Size(86, 23);
+            this.Chance.TabIndex = 4;
+            this.Chance.Text = "<- Chance";
+            this.Chance.UseVisualStyleBackColor = true;
+            this.Chance.Click += new System.EventHandler(this.Chance_Click);
             // 
             // labelKast
             // 
@@ -385,7 +386,7 @@
             this.Controls.Add(this.holdDice2);
             this.Controls.Add(this.holdDice1);
             this.Controls.Add(this.labelKast);
-            this.Controls.Add(this.button19);
+            this.Controls.Add(this.Chance);
             this.Controls.Add(this.Yatzee);
             this.Controls.Add(this.SStraight);
             this.Controls.Add(this.LStraight);
@@ -433,7 +434,7 @@
         private System.Windows.Forms.Button LStraight;
         private System.Windows.Forms.Button SStraight;
         private System.Windows.Forms.Button Yatzee;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button Chance;
         private System.Windows.Forms.Label labelKast;
         private System.Windows.Forms.CheckBox holdDice1;
         private System.Windows.Forms.CheckBox holdDice2;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Engine
+namespace Yatzee3000
 {
     static class Yatzee3000
     {
