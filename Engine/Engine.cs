@@ -40,6 +40,7 @@ namespace Engine
         public int GetCurrentPlayer() { return currentPlayer; }
 
         public int[,] GetScoreBoard() { return scoreBoard; }
+
         public Boolean[,] GetScoreBoardValidFields() { return scoreBoardValidFields; }
 
         public int[] GetThrow() { return roll; }

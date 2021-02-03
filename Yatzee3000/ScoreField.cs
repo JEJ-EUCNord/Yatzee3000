@@ -11,9 +11,9 @@ namespace Engine
         public int P2 { get; set; }
 
         public ScoreField(string label, int p1, int p2) {
-            this.Label = label;
-            this.P1 = p1;
-            this.P2 = p2;
+            Label = label;
+            P1 = p1;
+            P2 = p2;
         }
     }
 }
