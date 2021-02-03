@@ -27,9 +27,9 @@ namespace Engine
 
         public YatzeeEngine()
         {
-            roll = new int[numberOfDice];  // vi spiller med 5 terninger
-            holdDice = new bool[numberOfDice];
-            scoreBoard = new int[gameFields, numberOfPlayers + 1]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
+            roll = new int[numberOfDice];                                     // Antal terninger i kastet
+            holdDice = new bool[numberOfDice];                                // Markering af terninger som ikke indgår i næste slag
+            scoreBoard = new int[gameFields, numberOfPlayers + 1];            // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
             scoreBoardValidFields = new Boolean[gameFields, numberOfPlayers]; // Index=0 = FeltID,   index=1 Player 1, index=2 Player 2
             randomizer = new Random();
 
@@ -225,7 +225,6 @@ namespace Engine
 
     public interface IYatzeeClient
     {
-
         public void Update()
         {
 

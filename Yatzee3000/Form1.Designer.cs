@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.rollDice = new System.Windows.Forms.Button();
+            this.Thow = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btOnes = new System.Windows.Forms.Button();
             this.btTwos = new System.Windows.Forms.Button();
@@ -64,15 +64,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // rollDice
+            // Thow
             // 
-            this.rollDice.Location = new System.Drawing.Point(761, 415);
-            this.rollDice.Name = "rollDice";
-            this.rollDice.Size = new System.Drawing.Size(75, 59);
-            this.rollDice.TabIndex = 0;
-            this.rollDice.Text = "Kast !";
-            this.rollDice.UseVisualStyleBackColor = true;
-            this.rollDice.Click += new System.EventHandler(this.Button1_Click);
+            this.Thow.Location = new System.Drawing.Point(761, 415);
+            this.Thow.Name = "Thow";
+            this.Thow.Size = new System.Drawing.Size(75, 59);
+            this.Thow.TabIndex = 0;
+            this.Thow.Text = "Kast !";
+            this.Thow.UseVisualStyleBackColor = true;
+            this.Thow.Click += new System.EventHandler(this.Throw_Click);
             // 
             // pictureBox1
             // 
@@ -407,7 +407,7 @@
             this.Controls.Add(this.btOnes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGrid);
-            this.Controls.Add(this.rollDice);
+            this.Controls.Add(this.Thow);
             this.Name = "Form1";
             this.Text = "Yatzee3000 v0.1c";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -421,7 +421,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button rollDice;
+        private System.Windows.Forms.Button Thow;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btOnes;

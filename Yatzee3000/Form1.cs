@@ -33,7 +33,7 @@ namespace Engine
             dataGrid.DataSource = theScore;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Throw_Click(object sender, EventArgs e)
         {
             if (holdDice1.Checked)
                 ye.HoldDice(1);
