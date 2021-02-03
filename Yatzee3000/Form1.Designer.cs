@@ -204,7 +204,6 @@
             this.dice2.TabIndex = 4;
             this.dice2.Text = "X";
             this.dice2.UseVisualStyleBackColor = true;
-            this.dice2.Click += new System.EventHandler(this.Dice2_Click);
             // 
             // dice1
             // 
@@ -215,7 +214,6 @@
             this.dice1.TabIndex = 4;
             this.dice1.Text = "X";
             this.dice1.UseVisualStyleBackColor = true;
-            this.dice1.Click += new System.EventHandler(this.Dice1_Click);
             // 
             // diceBox
             // 
@@ -269,7 +267,6 @@
             this.button19.TabIndex = 4;
             this.button19.Text = "<- Chance";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.Button19_Click);
             // 
             // labelKast
             // 
@@ -290,7 +287,6 @@
             this.dataGrid.Size = new System.Drawing.Size(288, 468);
             this.dataGrid.TabIndex = 2;
             this.dataGrid.Text = "dataGridView1";
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
             // 
             // holdDice1
             // 
@@ -302,7 +298,6 @@
             this.holdDice1.TabIndex = 7;
             this.holdDice1.Text = "-- Hold --";
             this.holdDice1.UseVisualStyleBackColor = true;
-            this.holdDice1.CheckedChanged += new System.EventHandler(this.HoldDice1_CheckedChanged);
             // 
             // holdDice2
             // 
@@ -314,7 +309,6 @@
             this.holdDice2.TabIndex = 7;
             this.holdDice2.Text = " -- Hold -- ";
             this.holdDice2.UseVisualStyleBackColor = true;
-            this.holdDice2.CheckedChanged += new System.EventHandler(this.HoldDice2_CheckedChanged);
             // 
             // holdDice3
             // 
@@ -356,7 +350,6 @@
             this.messageField.Name = "messageField";
             this.messageField.Size = new System.Drawing.Size(0, 15);
             this.messageField.TabIndex = 8;
-            this.messageField.Click += new System.EventHandler(this.Label1_Click);
             // 
             // labelTur
             // 
@@ -410,7 +403,6 @@
             this.Controls.Add(this.Throw);
             this.Name = "Form1";
             this.Text = "Yatzee3000 v0.1c";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.diceBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();

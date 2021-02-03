@@ -154,46 +154,5 @@ namespace Engine
             //==============================================================================================================
             UpdateScoreBoard();
         }
-
-        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void Button19_Click(object sender, EventArgs e)
-        {
-            ye.SelectField(YField.CHANCE);
-        }
-
-        private void HoldDice1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HoldDice2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dice1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dice2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
