@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Thow = new System.Windows.Forms.Button();
+            this.Throw = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btOnes = new System.Windows.Forms.Button();
-            this.btTwos = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Ones = new System.Windows.Forms.Button();
+            this.Twos = new System.Windows.Forms.Button();
+            this.Threes = new System.Windows.Forms.Button();
+            this.Fours = new System.Windows.Forms.Button();
+            this.Fives = new System.Windows.Forms.Button();
+            this.Sixes = new System.Windows.Forms.Button();
+            this.Kind3 = new System.Windows.Forms.Button();
+            this.Kind4 = new System.Windows.Forms.Button();
             this.dice5 = new System.Windows.Forms.Button();
             this.dice4 = new System.Windows.Forms.Button();
             this.dice3 = new System.Windows.Forms.Button();
             this.dice2 = new System.Windows.Forms.Button();
             this.dice1 = new System.Windows.Forms.Button();
             this.diceBox = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.LStraight = new System.Windows.Forms.Button();
+            this.SStraight = new System.Windows.Forms.Button();
+            this.Yatzee = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.labelKast = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -58,21 +58,21 @@
             this.holdDice5 = new System.Windows.Forms.CheckBox();
             this.messageField = new System.Windows.Forms.Label();
             this.labelTur = new System.Windows.Forms.Label();
-            this.btFullHouse = new System.Windows.Forms.Button();
+            this.FullHouse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.diceBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // Thow
+            // Throw
             // 
-            this.Thow.Location = new System.Drawing.Point(761, 415);
-            this.Thow.Name = "Thow";
-            this.Thow.Size = new System.Drawing.Size(75, 59);
-            this.Thow.TabIndex = 0;
-            this.Thow.Text = "Kast !";
-            this.Thow.UseVisualStyleBackColor = true;
-            this.Thow.Click += new System.EventHandler(this.Throw_Click);
+            this.Throw.Location = new System.Drawing.Point(761, 415);
+            this.Throw.Name = "Throw";
+            this.Throw.Size = new System.Drawing.Size(75, 59);
+            this.Throw.TabIndex = 0;
+            this.Throw.Text = "Kast !";
+            this.Throw.UseVisualStyleBackColor = true;
+            this.Throw.Click += new System.EventHandler(this.Throw_Click);
             // 
             // pictureBox1
             // 
@@ -85,85 +85,85 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btOnes
+            // Ones
             // 
-            this.btOnes.Location = new System.Drawing.Point(307, 13);
-            this.btOnes.Name = "btOnes";
-            this.btOnes.Size = new System.Drawing.Size(86, 23);
-            this.btOnes.TabIndex = 4;
-            this.btOnes.Text = "<- 1\'ERE";
-            this.btOnes.UseVisualStyleBackColor = true;
-            this.btOnes.Click += new System.EventHandler(this.Button3_Click);
+            this.Ones.Location = new System.Drawing.Point(307, 13);
+            this.Ones.Name = "Ones";
+            this.Ones.Size = new System.Drawing.Size(86, 23);
+            this.Ones.TabIndex = 4;
+            this.Ones.Text = "<- 1\'ERE";
+            this.Ones.UseVisualStyleBackColor = true;
+            this.Ones.Click += new System.EventHandler(this.Ones_Click);
             // 
-            // btTwos
+            // Twos
             // 
-            this.btTwos.Location = new System.Drawing.Point(307, 42);
-            this.btTwos.Name = "btTwos";
-            this.btTwos.Size = new System.Drawing.Size(86, 23);
-            this.btTwos.TabIndex = 4;
-            this.btTwos.Text = "<- 2\'ERE";
-            this.btTwos.UseVisualStyleBackColor = true;
-            this.btTwos.Click += new System.EventHandler(this.BtTwos_Click);
+            this.Twos.Location = new System.Drawing.Point(307, 42);
+            this.Twos.Name = "Twos";
+            this.Twos.Size = new System.Drawing.Size(86, 23);
+            this.Twos.TabIndex = 4;
+            this.Twos.Text = "<- 2\'ERE";
+            this.Twos.UseVisualStyleBackColor = true;
+            this.Twos.Click += new System.EventHandler(this.Twos_Click);
             // 
-            // button5
+            // Threes
             // 
-            this.button5.Location = new System.Drawing.Point(307, 71);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "<- 3\'ERE";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            this.Threes.Location = new System.Drawing.Point(307, 71);
+            this.Threes.Name = "Threes";
+            this.Threes.Size = new System.Drawing.Size(86, 23);
+            this.Threes.TabIndex = 4;
+            this.Threes.Text = "<- 3\'ERE";
+            this.Threes.UseVisualStyleBackColor = true;
+            this.Threes.Click += new System.EventHandler(this.Threes_Click);
             // 
-            // button6
+            // Fours
             // 
-            this.button6.Location = new System.Drawing.Point(307, 100);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "<- 4\'ERE";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            this.Fours.Location = new System.Drawing.Point(307, 100);
+            this.Fours.Name = "Fours";
+            this.Fours.Size = new System.Drawing.Size(86, 23);
+            this.Fours.TabIndex = 4;
+            this.Fours.Text = "<- 4\'ERE";
+            this.Fours.UseVisualStyleBackColor = true;
+            this.Fours.Click += new System.EventHandler(this.Fours_Click);
             // 
-            // button7
+            // Fives
             // 
-            this.button7.Location = new System.Drawing.Point(307, 129);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "<- 5\'ERE";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            this.Fives.Location = new System.Drawing.Point(307, 129);
+            this.Fives.Name = "Fives";
+            this.Fives.Size = new System.Drawing.Size(86, 23);
+            this.Fives.TabIndex = 4;
+            this.Fives.Text = "<- 5\'ERE";
+            this.Fives.UseVisualStyleBackColor = true;
+            this.Fives.Click += new System.EventHandler(this.Fives_Click);
             // 
-            // button8
+            // Sixes
             // 
-            this.button8.Location = new System.Drawing.Point(307, 158);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(86, 23);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "<- 6\'ERE";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Button8_Click);
+            this.Sixes.Location = new System.Drawing.Point(307, 158);
+            this.Sixes.Name = "Sixes";
+            this.Sixes.Size = new System.Drawing.Size(86, 23);
+            this.Sixes.TabIndex = 4;
+            this.Sixes.Text = "<- 6\'ERE";
+            this.Sixes.UseVisualStyleBackColor = true;
+            this.Sixes.Click += new System.EventHandler(this.Sixes_Click);
             // 
-            // button9
+            // Kind3
             // 
-            this.button9.Location = new System.Drawing.Point(307, 187);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(86, 23);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "<- 3 ENS ";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            this.Kind3.Location = new System.Drawing.Point(307, 187);
+            this.Kind3.Name = "Kind3";
+            this.Kind3.Size = new System.Drawing.Size(86, 23);
+            this.Kind3.TabIndex = 4;
+            this.Kind3.Text = "<- 3 ENS ";
+            this.Kind3.UseVisualStyleBackColor = true;
+            this.Kind3.Click += new System.EventHandler(this.Kind3_Click);
             // 
-            // button10
+            // Kind4
             // 
-            this.button10.Location = new System.Drawing.Point(307, 216);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(86, 23);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "<- 4 ENS";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.Button10_Click);
+            this.Kind4.Location = new System.Drawing.Point(307, 216);
+            this.Kind4.Name = "Kind4";
+            this.Kind4.Size = new System.Drawing.Size(86, 23);
+            this.Kind4.TabIndex = 4;
+            this.Kind4.Text = "<- 4 ENS";
+            this.Kind4.UseVisualStyleBackColor = true;
+            this.Kind4.Click += new System.EventHandler(this.Kind4_Click);
             // 
             // dice5
             // 
@@ -231,35 +231,35 @@
             this.diceBox.TabStop = false;
             this.diceBox.Text = "Terningeslag";
             // 
-            // button16
+            // LStraight
             // 
-            this.button16.Location = new System.Drawing.Point(307, 273);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(86, 23);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "L.Straigth";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.Button16_Click);
+            this.LStraight.Location = new System.Drawing.Point(307, 273);
+            this.LStraight.Name = "LStraight";
+            this.LStraight.Size = new System.Drawing.Size(86, 23);
+            this.LStraight.TabIndex = 4;
+            this.LStraight.Text = "<- Ll Streg";
+            this.LStraight.UseVisualStyleBackColor = true;
+            this.LStraight.Click += new System.EventHandler(this.LStraight_Click);
             // 
-            // button17
+            // SStraight
             // 
-            this.button17.Location = new System.Drawing.Point(307, 302);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(86, 23);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "S.Straight";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.Button17_Click);
+            this.SStraight.Location = new System.Drawing.Point(307, 302);
+            this.SStraight.Name = "SStraight";
+            this.SStraight.Size = new System.Drawing.Size(86, 23);
+            this.SStraight.TabIndex = 4;
+            this.SStraight.Text = "<- St. Streg";
+            this.SStraight.UseVisualStyleBackColor = true;
+            this.SStraight.Click += new System.EventHandler(this.SStraight_Click);
             // 
-            // button18
+            // Yatzee
             // 
-            this.button18.Location = new System.Drawing.Point(307, 331);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(86, 23);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "<- Yatzee";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.Button18_Click);
+            this.Yatzee.Location = new System.Drawing.Point(307, 331);
+            this.Yatzee.Name = "Yatzee";
+            this.Yatzee.Size = new System.Drawing.Size(86, 23);
+            this.Yatzee.TabIndex = 4;
+            this.Yatzee.Text = "<- Yatzee";
+            this.Yatzee.UseVisualStyleBackColor = true;
+            this.Yatzee.Click += new System.EventHandler(this.Yatzee_Click);
             // 
             // button19
             // 
@@ -368,22 +368,22 @@
             this.labelTur.TabIndex = 9;
             this.labelTur.Text = "Spiller :";
             // 
-            // btFullHouse
+            // FullHouse
             // 
-            this.btFullHouse.Location = new System.Drawing.Point(307, 245);
-            this.btFullHouse.Name = "btFullHouse";
-            this.btFullHouse.Size = new System.Drawing.Size(86, 23);
-            this.btFullHouse.TabIndex = 10;
-            this.btFullHouse.Text = "<- FullHouse";
-            this.btFullHouse.UseVisualStyleBackColor = true;
-            this.btFullHouse.Click += new System.EventHandler(this.BtFullHouse_Click);
+            this.FullHouse.Location = new System.Drawing.Point(307, 245);
+            this.FullHouse.Name = "FullHouse";
+            this.FullHouse.Size = new System.Drawing.Size(86, 23);
+            this.FullHouse.TabIndex = 10;
+            this.FullHouse.Text = "<- Fuldt Hus";
+            this.FullHouse.UseVisualStyleBackColor = true;
+            this.FullHouse.Click += new System.EventHandler(this.FullHouse_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 486);
-            this.Controls.Add(this.btFullHouse);
+            this.Controls.Add(this.FullHouse);
             this.Controls.Add(this.labelTur);
             this.Controls.Add(this.messageField);
             this.Controls.Add(this.holdDice5);
@@ -393,21 +393,21 @@
             this.Controls.Add(this.holdDice1);
             this.Controls.Add(this.labelKast);
             this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.Yatzee);
+            this.Controls.Add(this.SStraight);
+            this.Controls.Add(this.LStraight);
             this.Controls.Add(this.diceBox);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.btTwos);
-            this.Controls.Add(this.btOnes);
+            this.Controls.Add(this.Kind4);
+            this.Controls.Add(this.Kind3);
+            this.Controls.Add(this.Sixes);
+            this.Controls.Add(this.Fives);
+            this.Controls.Add(this.Fours);
+            this.Controls.Add(this.Threes);
+            this.Controls.Add(this.Twos);
+            this.Controls.Add(this.Ones);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGrid);
-            this.Controls.Add(this.Thow);
+            this.Controls.Add(this.Throw);
             this.Name = "Form1";
             this.Text = "Yatzee3000 v0.1c";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -421,26 +421,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Thow;
+        private System.Windows.Forms.Button Throw;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btOnes;
-        private System.Windows.Forms.Button btTwos;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Ones;
+        private System.Windows.Forms.Button Twos;
+        private System.Windows.Forms.Button Threes;
+        private System.Windows.Forms.Button Fours;
+        private System.Windows.Forms.Button Fives;
+        private System.Windows.Forms.Button Sixes;
+        private System.Windows.Forms.Button Kind3;
+        private System.Windows.Forms.Button Kind4;
         private System.Windows.Forms.Button dice5;
         private System.Windows.Forms.Button dice4;
         private System.Windows.Forms.Button dice3;
         private System.Windows.Forms.Button dice2;
         private System.Windows.Forms.Button dice1;
         private System.Windows.Forms.GroupBox diceBox;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button LStraight;
+        private System.Windows.Forms.Button SStraight;
+        private System.Windows.Forms.Button Yatzee;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label labelKast;
         private System.Windows.Forms.CheckBox holdDice1;
@@ -450,7 +450,7 @@
         private System.Windows.Forms.CheckBox holdDice5;
         private System.Windows.Forms.Label messageField;
         private System.Windows.Forms.Label labelTur;
-        private System.Windows.Forms.Button btFullHouse;
+        private System.Windows.Forms.Button FullHouse;
     }
 }
 

@@ -6,7 +6,7 @@ namespace Engine
     public enum YField
     {
         ONES, TWOS, THREES, FOURS, FIVES, SIXES, UPPER_SUB_TOTAL, BONUS, UPPER_TOTAL,
-        KIND3, KIND4, FHOUSE, S_STRAIGHT, L_STRAIGHT, YATZEE, CHANCE, LOWER_TOTAL, TOTAL
+        KIND_3, KIND_4, FULL_HOUSE, S_STRAIGHT, L_STRAIGHT, YATZEE, CHANCE, LOWER_TOTAL, TOTAL
     };
     public class YatzeeEngine
     {
@@ -140,9 +140,9 @@ namespace Engine
                 }
 
 
-                lower_total += scoreBoard[(int)YField.KIND3, x];
-                lower_total += scoreBoard[(int)YField.KIND4, x];
-                lower_total += scoreBoard[(int)YField.FHOUSE, x];
+                lower_total += scoreBoard[(int)YField.KIND_3, x];
+                lower_total += scoreBoard[(int)YField.KIND_4, x];
+                lower_total += scoreBoard[(int)YField.FULL_HOUSE, x];
                 lower_total += scoreBoard[(int)YField.S_STRAIGHT, x];
                 lower_total += scoreBoard[(int)YField.L_STRAIGHT, x];
                 lower_total += scoreBoard[(int)YField.YATZEE, x];
@@ -186,14 +186,14 @@ namespace Engine
                 case YField.SIXES:
                     scoreBoard[(int)YField.SIXES, currentPlayer] = ScoreCounter.ScoreSingleSum(6, roll);
                     break;
-                case YField.KIND3:
-                    scoreBoard[(int)YField.KIND3, currentPlayer] = ScoreCounter.ScoreKind(3, roll);
+                case YField.KIND_3:
+                    scoreBoard[(int)YField.KIND_3, currentPlayer] = ScoreCounter.ScoreKind(3, roll);
                     break;
-                case YField.KIND4:
-                    scoreBoard[(int)YField.KIND4, currentPlayer] = ScoreCounter.ScoreKind(4, roll);
+                case YField.KIND_4:
+                    scoreBoard[(int)YField.KIND_4, currentPlayer] = ScoreCounter.ScoreKind(4, roll);
                     break;
-                case YField.FHOUSE:
-                    scoreBoard[(int)YField.FHOUSE, currentPlayer] = ScoreCounter.ScoreFullHouse(roll);
+                case YField.FULL_HOUSE:
+                    scoreBoard[(int)YField.FULL_HOUSE, currentPlayer] = ScoreCounter.ScoreFullHouse(roll);
                     break;
                 case YField.S_STRAIGHT:
                     scoreBoard[(int)YField.S_STRAIGHT, currentPlayer] = ScoreCounter.ScoreSmallStraight(roll);

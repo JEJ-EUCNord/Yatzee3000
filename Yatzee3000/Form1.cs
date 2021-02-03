@@ -74,7 +74,7 @@ namespace Engine
             return labels[(int)field];
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void Ones_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.ONES);
         }
@@ -99,7 +99,7 @@ namespace Engine
             UpdateScoreBoard();
         }
 
-        private void BtTwos_Click(object sender, EventArgs e)
+        private void Twos_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.TWOS);
         }
@@ -114,47 +114,47 @@ namespace Engine
 
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void Threes_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.THREES);
         }
 
-        private void Button6_Click(object sender, EventArgs e)
+        private void Fours_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.FOURS);
         }
 
-        private void Button7_Click(object sender, EventArgs e)
+        private void Fives_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.FIVES);
         }
 
-        private void Button8_Click(object sender, EventArgs e)
+        private void Sixes_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.SIXES);
         }
 
-        private void Button9_Click(object sender, EventArgs e)
+        private void Kind3_Click(object sender, EventArgs e)
         {
-            ye.SelectField(YField.KIND3);
+            ye.SelectField(YField.KIND_3);
         }
 
-        private void Button10_Click(object sender, EventArgs e)
+        private void Kind4_Click(object sender, EventArgs e)
         {
-            ye.SelectField(YField.KIND4);
+            ye.SelectField(YField.KIND_4);
         }
 
-        private void Button16_Click(object sender, EventArgs e)
+        private void LStraight_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.S_STRAIGHT);
         }
 
-        private void Button17_Click(object sender, EventArgs e)
+        private void SStraight_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.L_STRAIGHT);
         }
 
-        private void Button18_Click(object sender, EventArgs e)
+        private void Yatzee_Click(object sender, EventArgs e)
         {
             ye.SelectField(YField.YATZEE);
         }
@@ -189,9 +189,9 @@ namespace Engine
 
         }
 
-        private void BtFullHouse_Click(object sender, EventArgs e)
+        private void FullHouse_Click(object sender, EventArgs e)
         {
-            ye.SelectField(YField.FHOUSE);
+            ye.SelectField(YField.FULL_HOUSE);
         }
     }
 }
